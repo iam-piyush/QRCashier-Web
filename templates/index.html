@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QRCashier</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/tailwind.css" />
+  </head>
+
+  <body>
+    <div class="bg-white">
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div class="mx-auto py-32 sm:py-48 lg:py-12" style="max-width: 1000px">
+          <div
+            class="calculator flex min-h-full flex-col justify-center px-6 py-10 lg:px-8"
+          >
+            <h1
+              class="text-center text-4xl font-normal sm:font-bold md:font-thin lg:font-semibold xl:font-black text-black"
+            >
+              QRCashier
+            </h1>
+            <div class="supermarket-info">
+              <h2 id="supermarketName" class="text-lg font-semibold mt-5">
+                Gupta Grocery Store
+              </h2>
+              <p id="supermarketPhone">+91 9887685088</p>
+              <p id="supermarketAddress">140307 Landran, Punjab</p>
+            </div>
+
+            <div id="customerDetails">
+              <div id="customerInput">
+                <input type="text" id="customerName" placeholder="Customer Name" class="item-input" />
+                <input type="tel" id="customerPhone" placeholder="Phone Number (Optional)" class="px-2 item-input" />
+                <input type="email" id="customerEmail" placeholder="Email Address (Optional)" class="px-2 item-input" />
+              </div>
+              
+            </div>
+            <form id="itemForm">
+              <table id="itemTable">
+                <tr>
+                  <th>S.No.</th>
+                  <th>Product</th>
+                  <th>Product Rate</th>
+                  <th>Quantity</th>
+                  <th>Units</th>
+                </tr>
+
+                <tr id="row-1">
+                  <td>1</td>
+                  <td>
+                    <input type="text" id="itemName-1" class="item-input" />
+                  </td>
+                  <td>
+                    <input type="text" id="itemPricePerUnit-1" class="item-input" />
+                  </td>
+                  <td>
+                    <input type="text" id="itemQuantity-1" class="item-input" />
+                  </td>
+                  <td>
+                    <input type="number" id="itemUnits-1" class="item-input" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" id="addItemBtn" class="add-button">
+                  Add Product
+                </button>
+             </form>
+            <div id="receipt"></div>
+            <button
+              type="button"
+              id="generateQRBtn"
+              class="generate-button"
+              style="display: none"
+            >
+              Generate QR Code
+            </button>
+            <div id="qrCodeDiv">
+              <img id="qrCode" src="" alt="QR Code" />
+            </div>
+            <button id="downloadReceiptImageBtn" style="margin-top: 20px;">Download Receipt</button>
+          </div>
+        </div>
+        <div
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script src="/static/script.js" type="text/JavaScript"></script>
+  </body>
+</html>

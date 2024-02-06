@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/***********  removes arrows from number input ***************/
+.item-input::-webkit-outer-spin-button,
+.item-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.item-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.calculator {
+  margin: 0 auto;
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.54);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: transparent;
+  text-align: center;
+}
+
+#addItemBtn {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#addItemBtn:hover {
+  background-color: black;
+}
+
+#receipt {
+  margin-bottom: 20px;
+}
+
+#qrCode {
+  max-width: 400px;
+  display: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#generateQRBtn {
+  background-color: #333333;
+  color: white;
+  border-radius: 5px;
+  max-width: 180px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#generateQRBtn:hover {
+  background-color: black;
+}
+
+.receipt-table {
+  width: 100%;
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+
+.receipt-table th,
+.receipt-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.receipt-table th {
+  background-color: #f2f2f2;
+}
+
+.receipt-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+
+
+
+
+#customerInput{
+  display: flex;
+  justify-content: space-between;
+}
+
+#customerDetails{
+  margin-top: 20px;
+  width: 100;
+}
+
+#customerName, #customerPhone, #customerEmail{
+  width: 300px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 14px;
+}
+
+#downloadReceiptImageBtn{
+  padding: 10px 7px;
+  border-radius: 5px;
+  background-color: #333333;
+  color: white;
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease;
+}
+
+#downloadReceiptImageBtn:hover{
+  background-color: black;
+}
+
+
+
