@@ -4,6 +4,9 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
+# Optionally, set environment variables directly
+# os.environ['VARIABLE_NAME'] = 'value'
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -19,13 +22,12 @@ def process_qr():
         border=2,
     )
 
-
     qr.add_data(f"Date: {data['date']}")
     qr.add_data("\n")
     qr.add_data(f"Time: {data['time']}")
     qr.add_data("\n")
     qr.add_data(f"{data['customerName']}")
-    
+
     qr.add_data("\n\n")
 
     # Add item details to the QR code
@@ -41,8 +43,6 @@ def process_qr():
     qr.add_data("\n")
     qr.add_data(f"{data['storeName'].strip()}")
 
-    
-
     qr.make(fit=True)
 
     # Save the receipt as an image
@@ -54,4 +54,3 @@ def process_qr():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
